@@ -1,19 +1,23 @@
-<div class="products-list">
-  <ul *ngFor="let product of products | async">
-    <div>
-      <section>
-        <img
-          class="product"
-          src="{{ product.image }}"
-          alt="{{ product.title }}"
-        />
-      </section>
-      <section class="product-title">
-        {{ product.title }}
-        <section class="product-rating">
-          {{ product.rating.rate }} {{ product.rating.count }}
+<div class="all-products">
+  <h1>Popular Products</h1>
+  <ul class="products-list">
+    <li *ngFor="let product of products | async">
+      <div class="product">
+        <section class="product-image">
+          <img
+            class="product"
+            src="{{ product.image }}"
+            alt="{{ product.title }}"
+          />
         </section>
-      </section>
-    </div>
+        <section class="product-title">
+          {{ product.title }}
+        </section>
+        <section class="product-rating">
+          <span class="rate">rating: {{ product.rating.rate }}</span>
+          <span class="count">({{ product.rating.count }})</span>
+        </section>
+      </div>
+    </li>
   </ul>
 </div>
