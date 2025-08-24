@@ -30,6 +30,8 @@ div.product:hover{
     border: 1.2px solid rgb(64, 164, 64);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transform: scale(1.01);
+    transition: 0.2s;
 }
 .product-title{
     display: flex;
@@ -45,9 +47,9 @@ div.product:hover{
     height: 15%;
     font-weight: 600;
     .rate{
-        margin-right: 1rem;
+        margin-right: .3rem;
     }
-    color: red;
+    color: rgb(186, 59, 59);
 }
 section.product-image{
     display: flex;
