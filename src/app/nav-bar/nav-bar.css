@@ -9,30 +9,42 @@ div.container{
     padding-bottom: .5rem;
     padding-top: 1rem;
     section{
+        width: auto;
         display: flex;
-        margin: 0 1rem 0 1rem;
         align-items: center;
     }
 }
 section.logo{
-    svg{
-        height: 4rem;
-        width: 4rem;
-        padding-bottom: .5rem;
-    }
+    margin-left: 2rem;
     b{
         font-size: 2rem;
     }
 }
-svg{
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: .5rem;
+div#inputWrapper{
+    border-radius: 1rem;
+    border:1px solid grey;
+    width: 23rem;
+    height: auto;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    fa-icon{
+        color: grey;
+        margin: .3rem;
+        size: .3rem;
+    }
 }
 input#search{
     width: 20rem;
-    height: 2rem;
-    border-radius: 1rem;
-    border:1px solid grey;
-    padding: 1rem;
+    height: 1.5rem;
+    border: none;
+    padding-left:.5rem;
+}
+input#search:focus{
+    outline: none;
+    border: none;
+}
+section.user{
+    margin-right: 2rem;
+    fa-icon{
+        margin: 1rem;
+    }
 }
