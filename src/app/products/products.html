@@ -3,16 +3,18 @@
   <ul class="products-list">
     <li *ngFor="let product of products | async">
       <div class="product">
-        <section class="product-image">
-          <img
-            class="product"
-            src="{{ product.image }}"
-            alt="{{ product.title }}"
-          />
-        </section>
-        <section class="product-title">
-          {{ product.title }}
-        </section>
+        <a [routerLink]="['/product-details', product.id]">
+          <section class="product-image">
+            <img
+              class="product"
+              src="{{ product.image }}"
+              alt="{{ product.title }}"
+            />
+          </section>
+          <section class="product-title">
+            {{ product.title }}
+          </section>
+        </a>
         <section class="product-rating">
           <span class="rate">rating: {{ product.rating.rate }}</span>
           <span class="count">({{ product.rating.count }})</span>

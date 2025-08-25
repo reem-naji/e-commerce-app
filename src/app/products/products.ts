@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { ProductService } from '../product.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-products',
   standalone:true,
-  imports: [CommonModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './products.html',
   styleUrl: './products.css'
 })

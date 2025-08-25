@@ -1,7 +1,9 @@
 <div class="nav-bar">
   <div class="container">
     <section class="logo">
-      <a href="#"> <fa-icon [icon]="faShopify" size="3x" /> <b>Shopify</b></a>
+      <a [routerLink]="['']"
+        ><fa-icon [icon]="faShopify" size="3x" /> <b>Shopify</b></a
+      >
     </section>
     <section class="search">
       <div id="inputWrapper">
@@ -16,10 +18,12 @@
     </section>
     <section class="user">
       <span class="account">
-        <a href="#"><fa-icon [icon]="faUser" size="lg" /></a>
+        <a [routerLink]="['login']"><fa-icon [icon]="faUser" size="lg" /></a>
       </span>
       <span class="cart">
-        <a href="#"><fa-icon [icon]="faCartShopping" size="lg" /></a>
+        <a [routerLink]="['cart']"
+          ><fa-icon [icon]="faCartShopping" size="lg"
+        /></a>
       </span>
     </section>
   </div>
