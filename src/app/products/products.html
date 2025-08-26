@@ -16,7 +16,9 @@
           {{ product.title }}
         </section>
         <section class="product-rating">
-          <span class="rate">rating: {{ product.rating.rate }}</span>
+          <span class="rate"
+            >rating: {{ product.rating.rate | number : "1.0-0" }}</span
+          >
           <span class="count">({{ product.rating.count }})</span>
         </section>
       </div>

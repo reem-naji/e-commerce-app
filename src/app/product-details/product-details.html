@@ -1,1 +1,15 @@
-<p>product details works!</p>
+<div *ngIf="product$ | async">
+  <div class="image">
+    <img src="{{ product.image }}" alt="{{ product.title }}" />
+  </div>
+  <div class="product-details">
+    <section class="rating">
+      <span class="rate"
+        >rating: {{ product.rating.rate | number : "1.0-0" }}
+      </span>
+      <span class="count">({{ product.rating.count }})</span>
+    </section>
+    <section class="title">{{ product.title }}</section>
+    <section class="description">{{ product.description }}</section>
+  </div>
+</div>
