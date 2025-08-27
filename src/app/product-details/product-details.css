@@ -23,7 +23,9 @@ div.product-details{
 }
 section.rating{
     margin-bottom: 2rem;
-    font-weight: 650;
+    span.count{
+        color: green;
+    }
 }
 section.price{
     color: red;
