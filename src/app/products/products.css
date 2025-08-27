@@ -38,7 +38,9 @@ div.product:hover{
             display: block;
             &:hover{
                 cursor: pointer;
-                box-shadow: 1rem rgba(185, 222, 183, 0.2);
+            }
+            &:active{
+                background-color: rgb(56, 120, 56);
             }
         }
     }
