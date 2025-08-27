@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { ProductService } from '../product.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { StarRating } from '../star-rating/star-rating';
 
 @Component({
   selector: 'app-products',
   standalone:true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, StarRating],
   templateUrl: './products.html',
   styleUrl: './products.css'
 })

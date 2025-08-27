@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ProductService } from '../product.service';
 import { ActivatedRoute } from '@angular/router';
+import { StarRating } from '../star-rating/star-rating';
 
 @Component({
   selector: 'app-product-details',
   standalone:true,
-  imports: [CommonModule],
+  imports: [CommonModule, StarRating],
   templateUrl: './product-details.html',
   styleUrl: './product-details.css'
 })
@@ -33,7 +34,6 @@ export class ProductDetails {
     this.product$ = this.productService.getProduct(this.productId);
     this.productService.getProduct(this.productId).subscribe(data => {
           this.product = data;
-          console.log(this.product);
     });
   }
   

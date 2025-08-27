@@ -26,11 +26,15 @@ section.rating{
     span.count{
         color: green;
     }
+    app-star-rating{
+        margin-right: .3rem;
+    }
 }
 section.price{
     color: red;
     margin-bottom: 2rem;
     font-weight: 500;
+    font-family: sans-serif;
 }
 section.title{
     margin-bottom: 2rem;

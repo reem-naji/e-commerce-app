@@ -15,14 +15,15 @@
         <section class="product-title">
           {{ product.title }}
         </section>
+        <section class="product-rating">
+          <app-star-rating [rating]="product.rating.rate"></app-star-rating>
+          <span class="rate">
+            {{ product.rating.rate | number : "1.0-1" }}
+          </span>
+          <span class="count"> ({{ product.rating.count }}) </span>
+        </section>
         <section class="price">
           {{ product.price | currency : "USD" : "symbol" : "3.2-2" }}
-        </section>
-        <section class="product-rating">
-          <span class="rate"
-            >rating: {{ product.rating.rate | number : "1.0-0" }}</span
-          >
-          <span class="count">({{ product.rating.count }})</span>
         </section>
       </div>
     </li>
