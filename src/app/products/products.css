@@ -51,7 +51,7 @@ div.product:hover{
     .rate{
         margin-right: .3rem;
     }
-    color: rgb(186, 59, 59);
+    color: grey;
 }
 section.product-image{
     display: flex;
@@ -63,4 +63,9 @@ img.product{
     height: 150px;
     width: 150px;
     object-fit:contain;
+}
+section.price{
+    font-weight: 600;
+    margin-left: .5rem;
+    color: rgb(186, 59, 59);
 }

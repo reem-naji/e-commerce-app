@@ -15,6 +15,9 @@
         <section class="product-title">
           {{ product.title }}
         </section>
+        <section class="price">
+          {{ product.price | currency : "USD" : "symbol" : "3.2-2" }}
+        </section>
         <section class="product-rating">
           <span class="rate"
             >rating: {{ product.rating.rate | number : "1.0-0" }}</span
