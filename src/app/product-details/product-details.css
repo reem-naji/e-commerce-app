@@ -1,0 +1,47 @@
+div.container{
+    display: flex;
+    
+}
+div.image{
+    margin: 1rem;
+    padding: 2rem;
+}
+img{
+    width: 500px;
+    height: 500px;
+    margin: 1rem;
+    padding: 3rem;
+    object-fit: contain;
+}
+div.product-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+section.rating{
+    margin-bottom: 2rem;
+    font-weight: 650;
+}
+section.price{
+    color: red;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+section.title{
+    margin-bottom: 2rem;
+    font-weight: 650;
+    font-size: 2rem;
+}
+p{
+    margin: 0.5rem;
+}
+section.category{
+    margin-bottom: 1.5rem;
+    a{
+        text-decoration:none;
+        color: green;
+    }
+}
