@@ -1,1 +1,18 @@
-<p>cart works!</p>
+<div class="cart">
+  <h2>Your Cart</h2>
+
+  <ul *ngIf="items$ | async as items">
+    <li *ngFor="let item of items">
+      <span>{{ item.title }}</span>
+      <span>{{ item.price | currency : "USD" }}</span>
+      <button (click)="removeItem(item.id)">Remove</button>
+    </li>
+
+    <div class="cart-summary" *ngIf="items.length > 0">
+      <p>Total: {{ getTotal() | currency : "USD" }}</p>
+      <button (click)="clear()">Clear Cart</button>
+    </div>
+
+    <p *ngIf="items.length === 0">Cart is empty.</p>
+  </ul>
+</div>

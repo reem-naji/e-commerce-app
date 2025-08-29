@@ -1,0 +1,21 @@
+.cart {
+  width: 80%;
+  margin: auto;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-summary {
+  margin-top: 1rem;
+  font-weight: bold;
+}

@@ -15,6 +15,9 @@
     <section class="price">
       {{ product.price | currency : "USD" : "symbol" : "3.2-2" }}
     </section>
+    <section class="add-to-cart">
+      <button class="add-btn" (click)="addToCart(product)">Add to cart</button>
+    </section>
     <section class="description">
       <p>description:</p>
       {{ product.description }}
