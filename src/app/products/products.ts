@@ -6,11 +6,12 @@ import { StarRating } from '../star-rating/star-rating';
 import { LimitStringPipe } from '../limit-string-pipe';
 import { CartService } from '../cart.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-products',
   standalone:true,
-  imports: [RouterModule, CommonModule, StarRating, LimitStringPipe],
+  imports: [RouterModule, CommonModule, StarRating, LimitStringPipe,FontAwesomeModule],
   templateUrl: './products.html',
   styleUrl: './products.css'
 })
@@ -18,6 +19,7 @@ export class Products {
   productService = inject(ProductService);
   cartService = inject(CartService);
   snackBar = inject(MatSnackBar);
+  faMagnifyingGlass = faMagnifyingGlass;
 
   products = this.productService.getProducts();
 

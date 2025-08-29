@@ -1,4 +1,15 @@
 <div class="all-products">
+  <section class="search">
+    <div id="inputWrapper">
+      <fa-icon [icon]="faMagnifyingGlass" />
+      <input
+        type="search"
+        name="search"
+        id="search"
+        placeholder="Search for Products"
+      />
+    </div>
+  </section>
   <h1>Popular products</h1>
   <ul class="products-list">
     <li *ngFor="let product of products | async">
