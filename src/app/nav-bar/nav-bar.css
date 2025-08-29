@@ -1,0 +1,53 @@
+div.nav-bar{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid grey;
+}
+div.container{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .5rem;
+    padding-top: 1rem;
+    section{
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+section.logo{
+    margin-left: 2rem;
+    b{
+        font-size: 2rem;
+    }
+}
+div#inputWrapper{
+    border-radius: 1rem;
+    width: 23rem;
+    height: auto;
+    box-shadow: 1px 1px 3px rgba(0.3, 0.3, 0.4, 0.4);
+    fa-icon{
+        color: grey;
+        margin-right: 0.3rem;
+        size: .3rem;
+    }
+}
+input#search{
+    width: 20rem;
+    height: 1.5rem;
+    border: none;
+    padding-left:.5rem;
+}
+input#search:focus{
+    outline: none;
+    border: none;
+}
+section.user{
+    margin-right: 2rem;
+    fa-icon{
+        margin: 1rem;
+    }
+}

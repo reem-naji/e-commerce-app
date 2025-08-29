@@ -1,0 +1,34 @@
+<div class="all-products">
+  <h1>Popular products</h1>
+  <ul class="products-list">
+    <li *ngFor="let product of products | async">
+      <div class="product">
+        <a [routerLink]="['/product-details', product.id]">
+          <section class="product-image">
+            <img
+              class="product"
+              src="{{ product.image }}"
+              alt="{{ product.title }}"
+            />
+          </section>
+        </a>
+        <section class="product-title">
+          {{ product.title | limitString }}
+        </section>
+        <section class="add-to-cart">
+          <button id="add">Add to cart</button>
+        </section>
+        <section class="product-rating">
+          <app-star-rating [rating]="product.rating.rate"></app-star-rating>
+          <span class="rate">
+            {{ product.rating.rate | number : "1.0-1" }}
+          </span>
+          <span class="count"> ({{ product.rating.count }}) </span>
+        </section>
+        <section class="price">
+          {{ product.price | currency : "USD" : "symbol" : "3.2-2" }}
+        </section>
+      </div>
+    </li>
+  </ul>
+</div>

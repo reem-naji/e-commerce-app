@@ -1,0 +1,23 @@
+<div *ngIf="product$ | async" class="container">
+  <div class="image">
+    <img src="{{ product.image }}" alt="{{ product.title }}" />
+  </div>
+  <div class="product-details">
+    <section class="category">
+      <a href="#">{{ product.category }}</a>
+    </section>
+
+    <section class="title">{{ product.title }}</section>
+    <section class="rating">
+      <app-star-rating [rating]="product.rating.rate"></app-star-rating>
+      <span class="count">({{ product.rating.count }} reviews)</span>
+    </section>
+    <section class="price">
+      {{ product.price | currency : "USD" : "symbol" : "3.2-2" }}
+    </section>
+    <section class="description">
+      <p>description:</p>
+      {{ product.description }}
+    </section>
+  </div>
+</div>

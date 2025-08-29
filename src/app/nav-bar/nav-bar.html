@@ -1,0 +1,30 @@
+<div class="nav-bar">
+  <div class="container">
+    <section class="logo">
+      <a [routerLink]="['']"
+        ><fa-icon [icon]="faShopify" size="3x" /> <b>Shopify</b></a
+      >
+    </section>
+    <section class="search">
+      <div id="inputWrapper">
+        <fa-icon [icon]="faMagnifyingGlass" />
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search for Products"
+        />
+      </div>
+    </section>
+    <section class="user">
+      <span class="account">
+        <a [routerLink]="['login']"><fa-icon [icon]="faUser" size="lg" /></a>
+      </span>
+      <span class="cart">
+        <a [routerLink]="['cart']"
+          ><fa-icon [icon]="faCartShopping" size="lg"
+        /></a>
+      </span>
+    </section>
+  </div>
+</div>
